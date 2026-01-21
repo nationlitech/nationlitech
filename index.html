@@ -230,28 +230,27 @@
 							</section>
 
 						<!-- Get Started -->
-							<!-- Contact Us 板块 - 统一边距+左对齐+水平居中+修复导航跳转 -->
+							<!-- Contact Us 板块 - 手机端防错格+统一边距+左对齐 -->
 <section id="cta" class="main special" style="background-color: #f9f9f9; padding: 4em 0; margin: 2em 0;">
     <header class="major">
         <h2 style="font-size: 2em; font-weight: 600; margin-bottom: 1.5em; text-align: center;">Contact Us</h2>
     </header>
     <div class="content" style="max-width: 900px; margin: 0 auto; line-height: 2.2; font-size: 1.05em; color: #333; padding: 0 2em;">
-        <!-- 外层容器：统一边距和对齐基准 -->
         <div class="contact-container" style="display: flex; flex-direction: column; gap: 20px;">
             <!-- 第一行：2个邮箱 -->
-            <div style="display: flex; gap: 40px; align-items: center;">
-                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+            <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px; white-space: nowrap;">
                     <span style="font-size: 1.2em;">✉️</span>
                     <strong>Email 1:</strong> baowenjing@nationlitech.com
                 </p>
-                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px; white-space: nowrap;">
                     <span style="font-size: 1.2em;">✉️</span>
                     <strong>Email 2:</strong> guoli_technology@126.com
                 </p>
             </div>
             <!-- 第二行：Phone + Address -->
-            <div style="display: flex; gap: 40px; align-items: center;">
-                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+            <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px; white-space: nowrap;">
                     <span style="font-size: 1.2em;">📞</span>
                     <strong>Phone:</strong> +86 18969163289
                 </p>
@@ -260,8 +259,8 @@
                     <strong>Address:</strong> Yuhang District, Hangzhou City, Zhejiang Province, China
                 </p>
             </div>
-            <!-- 第三行：WhatsApp（左对齐，和上两行左边一致） -->
-            <div style="display: flex; align-items: center; gap: 10px;">
+            <!-- 第三行：WhatsApp -->
+            <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
                 <span style="font-size: 1.2em;">💬</span>
                 <div>
                     <strong>WhatsApp:</strong>
@@ -269,8 +268,8 @@
                     <span style="font-size: 0.9em; color: #666; margin-left: 10px;">Share: <a href="https://wa.me/8618969163289" target="_blank" style="color: #666; text-decoration: underline;">https://wa.me/8618969163289</a></span>
                 </div>
             </div>
-            <!-- 第四行：WeChat（左对齐+文字图标水平居中） -->
-            <div style="display: flex; align-items: center; gap: 10px;">
+            <!-- 第四行：WeChat -->
+            <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
                 <span style="font-size: 1.2em;">📱</span>
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <strong>WeChat:</strong> Add via QR Code
@@ -285,7 +284,7 @@
         </ul>
     </footer>
     <style>
-        /* 响应式适配 - 手机小屏幕堆叠显示 */
+        /* 响应式适配 - 手机端优化 */
         @media screen and (max-width: 768px) {
             #cta h2 {
                 font-size: 1.6em !important;
@@ -295,10 +294,16 @@
                 padding: 0 1.2em !important;
                 font-size: 1em !important;
             }
+            /* 手机端允许容器换行，但短文本不拆分 */
             #cta .contact-container > div {
-                flex-direction: column !important;
+                flex-wrap: wrap !important;
                 align-items: flex-start !important;
-                gap: 10px !important;
+                gap: 15px !important;
+            }
+            /* 地址单独允许换行，避免超出屏幕 */
+            #cta .contact-container div:nth-child(2) p:last-child {
+                white-space: normal !important;
+                width: 100% !important;
             }
             #cta .button {
                 width: 80% !important;
