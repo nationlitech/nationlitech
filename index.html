@@ -230,36 +230,56 @@
 							</section>
 
 						<!-- Get Started -->
-							<!-- Contact Us 板块 - 带响应式优化 -->
+							<!-- Contact Us 板块 - 两列布局+图标+响应式优化 -->
 <section id="contact" class="main special" style="background-color: #f9f9f9; padding: 4em 0; margin: 2em 0;">
     <header class="major">
         <h2 style="font-size: 2em; font-weight: 600; margin-bottom: 1.5em; text-align: center;">Contact Us</h2>
     </header>
-    <div class="content" style="max-width: 900px; margin: 0 auto; text-align: left; line-height: 2.2; font-size: 1.05em; color: #333; padding: 0 2em;">
-        <div class="contact-info" style="display: flex; flex-direction: column; gap: 18px;">
-            <p><strong style="color: #333;">Email:</strong> baowenjing@nationlitech.com</p>
-            <p><strong style="color: #333;">Email:</strong> guoli_technology@126.com</p>
-            <p><strong style="color: #333;">Phone:</strong> +86 18969163289</p>
-            <p><strong style="color: #333;">WhatsApp:</strong> 
-                <a href="https://wa.me/8618969163289" target="_blank" style="color: #333; text-decoration: underline; transition: color 0.2s;">
-                    Chat with us on WhatsApp
-                </a>
-            </p>
-            <p><strong style="color: #333;">WeChat:</strong> 
-                <span>Add WeChat via QR Code</span><br>
-                <img src="images/Contact Us/1.jpg" alt="WeChat QR Code" style="width: 120px; height: 120px; margin-top: 8px; border: 1px solid #e0e0e0; padding: 5px; border-radius: 4px;">
-            </p>
-            <p><strong style="color: #333;">Address:</strong> Yuhang District, Hangzhou City, Zhejiang Province, China</p>
+    <div class="content" style="max-width: 900px; margin: 0 auto; line-height: 2.2; font-size: 1.05em; color: #333; padding: 0 2em;">
+        <!-- 两列布局容器 -->
+        <div class="contact-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
+            <!-- 第一列 -->
+            <div class="contact-col" style="display: flex; flex-direction: column; gap: 20px;">
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2em;">✉️</span>
+                    <strong>Email:</strong> baowenjing@nationlitech.com
+                </p>
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2em;">📞</span>
+                    <strong>Phone:</strong> +86 18969163289
+                </p>
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2em;">📍</span>
+                    <strong>Address:</strong> Yuhang District, Hangzhou City, Zhejiang Province, China
+                </p>
+            </div>
+            <!-- 第二列 -->
+            <div class="contact-col" style="display: flex; flex-direction: column; gap: 20px;">
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2em;">✉️</span>
+                    <strong>Email:</strong> guoli_technology@126.com
+                </p>
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2em;">💬</span>
+                    <strong>WhatsApp:</strong> 
+                    <a href="https://wa.me/8618969163289" target="_blank" style="color: #333; text-decoration: underline;">Chat with us</a>
+                </p>
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2em;">📱</span>
+                    <strong>WeChat:</strong> 
+                    <span>Add via QR Code</span><br>
+                    <img src="images/Contact Us/1.jpg" alt="WeChat QR Code" style="width: 100px; height: 100px; margin: 8px 0 0 28px; border: 1px solid #e0e0e0; padding: 4px; border-radius: 4px;">
+                </p>
+            </div>
         </div>
     </div>
     <footer class="major" style="margin-top: 35px; text-align: center;">
         <ul class="actions special" style="padding-left: 0; list-style: none;">
-            <!-- 点击按钮唤起邮件客户端，自动填充收件人和主题 -->
             <li><a href="mailto:baowenjing@nationlitech.com,guoli_technology@126.com?subject=Inquiry from Website" class="button primary">Send Message</a></li>
         </ul>
     </footer>
     <style>
-        /* 响应式适配 - 手机小屏幕 */
+        /* 响应式适配 - 手机小屏幕自动变回单列 */
         @media screen and (max-width: 768px) {
             #contact h2 {
                 font-size: 1.6em !important;
@@ -269,12 +289,16 @@
                 padding: 0 1.2em !important;
                 font-size: 1em !important;
             }
-            #contact .contact-info {
+            #contact .contact-grid {
+                grid-template-columns: 1fr !important;
                 gap: 15px !important;
             }
             #contact .button {
                 width: 80% !important;
                 padding: 0.8em 0 !important;
+            }
+            #contact img {
+                margin-left: 0 !important;
             }
         }
     </style>
