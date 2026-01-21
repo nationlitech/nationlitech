@@ -230,7 +230,7 @@
 							</section>
 
 						<!-- Get Started -->
-							<!-- Contact Us 板块 - 两列布局+图标+响应式优化 -->
+							<!-- Contact Us 板块 - 两列布局+图标+全信息一键复制+响应式优化 -->
 <section id="contact" class="main special" style="background-color: #f9f9f9; padding: 4em 0; margin: 2em 0;">
     <header class="major">
         <h2 style="font-size: 2em; font-weight: 600; margin-bottom: 1.5em; text-align: center;">Contact Us</h2>
@@ -240,29 +240,48 @@
         <div class="contact-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
             <!-- 第一列 -->
             <div class="contact-col" style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- 邮箱1 + 一键复制功能 -->
                 <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 1.2em;">✉️</span>
-                    <strong>Email:</strong> baowenjing@nationlitech.com
+                    <div>
+                        <strong>Email 1:</strong><br>
+                        <code onclick="copyEmail1()" style="background: #f0f0f0; padding: 2px 4px; border-radius: 2px; cursor: pointer; user-select: none; font-size: 0.95em;">baowenjing@nationlitech.com</code>
+                    </div>
                 </p>
+                <!-- 电话 + 一键复制功能 -->
                 <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 1.2em;">📞</span>
-                    <strong>Phone:</strong> +86 18969163289
+                    <div>
+                        <strong>Phone:</strong><br>
+                        <code onclick="copyPhoneNumber()" style="background: #f0f0f0; padding: 2px 4px; border-radius: 2px; cursor: pointer; user-select: none; font-size: 0.95em;">+86 18969163289</code>
+                    </div>
                 </p>
-                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+                <!-- 地址：缩小字号+电脑端单行 -->
+                <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 0.9em; white-space: nowrap;">
                     <span style="font-size: 1.2em;">📍</span>
                     <strong>Address:</strong> Yuhang District, Hangzhou City, Zhejiang Province, China
                 </p>
             </div>
             <!-- 第二列 -->
             <div class="contact-col" style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- 邮箱2 + 一键复制功能 -->
                 <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 1.2em;">✉️</span>
-                    <strong>Email:</strong> guoli_technology@126.com
+                    <div>
+                        <strong>Email 2:</strong><br>
+                        <code onclick="copyEmail2()" style="background: #f0f0f0; padding: 2px 4px; border-radius: 2px; cursor: pointer; user-select: none; font-size: 0.95em;">guoli_technology@126.com</code>
+                    </div>
                 </p>
-                <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 1.2em;">💬</span>
-                    <strong>WhatsApp:</strong> 
-                    <a href="https://wa.me/8618969163289" target="_blank" style="color: #333; text-decoration: underline;">Chat with us</a>
+                <!-- WhatsApp + 一键复制功能 -->
+                <p style="margin: 0; display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="font-size: 1.2em; margin-top: 2px;">💬</span>
+                    <div>
+                        <strong>WhatsApp:</strong><br>
+                        <a href="https://wa.me/8618969163289" target="_blank" style="color: #333; text-decoration: underline;">Chat with us</a><br>
+                        <span style="font-size: 0.9em; color: #666;">Share: 
+                            <code onclick="copyWhatsappNumber()" style="background: #f0f0f0; padding: 2px 4px; border-radius: 2px; cursor: pointer; user-select: none;">+86 18969163289</code>
+                        </span>
+                    </div>
                 </p>
                 <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 1.2em;">📱</span>
@@ -300,8 +319,77 @@
             #contact img {
                 margin-left: 0 !important;
             }
+            /* 手机端地址允许换行，避免超出屏幕 */
+            #contact .contact-col p:nth-child(3) {
+                white-space: normal !important;
+            }
         }
     </style>
+    <script>
+        // 复制邮箱1
+        function copyEmail1() {
+            const email = "baowenjing@nationlitech.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email 1 copied successfully!");
+            }).catch(err => {
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert("Email 1 copied successfully!");
+            });
+        }
+
+        // 复制邮箱2
+        function copyEmail2() {
+            const email = "guoli_technology@126.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email 2 copied successfully!");
+            }).catch(err => {
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert("Email 2 copied successfully!");
+            });
+        }
+
+        // 复制电话号码
+        function copyPhoneNumber() {
+            const number = "+86 18969163289";
+            navigator.clipboard.writeText(number).then(() => {
+                alert("Phone number copied successfully!");
+            }).catch(err => {
+                const textarea = document.createElement('textarea');
+                textarea.value = number;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert("Phone number copied successfully!");
+            });
+        }
+
+        // 复制WhatsApp号码
+        function copyWhatsappNumber() {
+            const number = "+86 18969163289";
+            navigator.clipboard.writeText(number).then(() => {
+                alert("WhatsApp number copied successfully!");
+            }).catch(err => {
+                const textarea = document.createElement('textarea');
+                textarea.value = number;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert("WhatsApp number copied successfully!");
+            });
+        }
+    </script>
 </section>
 
 					</div>
