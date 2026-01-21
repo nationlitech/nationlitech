@@ -325,43 +325,45 @@
 					</div>
 
 				<!-- Footer -->
-			<!-- 最终版：文案居左+联系方式居右，并排显示 -->
+			<!-- 完全匹配要求的页脚布局 -->
 <footer id="footer">
     <div class="inner">
-        <div class="content" style="display: flex; gap: 40px; align-items: flex-start;">
-            <!-- 左侧：文案区域 -->
-            <section style="flex: 1;">
+        <!-- 第一行：文案左 + 联系方式右 -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 20px;">
+            <!-- 左侧：文案 -->
+            <section style="flex: 1; text-align: left;">
                 <h3 style="font-size: 1.3em; margin-bottom: 0.8em; line-height: 1.4;">Welcome to Win-Win Cooperation</h3>
-                <p style="font-size: 1em; line-height: 1.6; margin-bottom: 1em; text-align: justify;">
+                <p style="font-size: 1em; line-height: 1.6; text-align: justify;">
                     Elevate your business from raw tea leaf trading to premium tea supply, and join us in sharing the lucrative dividends of the high-end tea market. Contact us today to obtain our detailed product catalog and real-time quotation.
                 </p>
-                <ul class="actions">
+                <ul class="actions" style="margin-top: 1em;">
                     <li><a href="#cta" class="button primary">Learn More</a></li>
                 </ul>
             </section>
-            <!-- 右侧：联系方式区域 -->
-            <section style="flex: 1;">
+            <!-- 右侧：联系方式 -->
+            <section style="flex: 0 0 300px; text-align: right;">
                 <h4 style="font-size: 1.1em; margin-bottom: 0.6em; line-height: 1.4;">Etiam feugiat</h4>
-                <ul class="alt" style="font-size: 0.95em; line-height: 1.8;">
+                <ul class="alt" style="font-size: 0.95em; line-height: 1.8; list-style: none; padding: 0;">
                     <li><strong>Address:</strong> Yuhang District, Hangzhou City, Zhejiang Province, China</li>
                     <li><strong>Phone:</strong> +86 18969163289</li>
                     <li><strong>Email:</strong> baowenjing@nationlitech.com / guoli_technology@126.com</li>
                 </ul>
             </section>
-            <!-- 保留社媒板块在最右侧 -->
-            <section>
-                <h4 style="font-size: 1.1em; margin-bottom: 0.6em; line-height: 1.4;">Follow Us</h4>
-                <ul class="icons">
-                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                </ul>
-            </section>
         </div>
-        <div class="copyright" style="font-size: 0.9em; line-height: 1.5; margin-top: 1.5em;">
-            &copy; Nationlitech 2026 All Rights Reserved. Design: HTML5 UP.
+        <!-- 社媒板块：在下方平铺 -->
+        <section style="margin-bottom: 20px; text-align: center;">
+            <h4 style="font-size: 1.1em; margin-bottom: 0.6em; line-height: 1.4;">Follow Us</h4>
+            <ul class="icons" style="display: flex; justify-content: center; gap: 20px; padding: 0; list-style: none;">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+        </section>
+        <!-- 版权信息 -->
+        <div class="copyright" style="font-size: 0.9em; line-height: 1.5; text-align: center;">
+            &copy; Nationlitech 2026 All Rights Reserved.
         </div>
     </div>
 </footer>
