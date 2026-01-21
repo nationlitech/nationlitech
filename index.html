@@ -230,7 +230,7 @@
 							</section>
 
 						<!-- Get Started -->
-							<!-- Contact Us 板块 - 修复 WhatsApp 长链接溢出+手机端适配 -->
+							<!-- Contact Us 板块（电脑端+手机端完美适配） -->
 <section id="cta" class="main special" style="background-color: #f9f9f9; padding: 4em 0; margin: 2em 0;">
     <header class="major">
         <h2 style="font-size: 2em; font-weight: 600; margin-bottom: 1.5em; text-align: center;">Contact Us</h2>
@@ -259,17 +259,16 @@
                     <strong>Address:</strong> Yuhang District, Hangzhou City, Zhejiang Province, China
                 </p>
             </div>
-            <!-- 电脑端专用修复：图标与WhatsApp完全水平对齐 -->
-<p style="margin: 0; display: flex; align-items: baseline; gap: 10px;">
-    <span style="font-size: 1.2em; vertical-align: middle;">💬</span>
-    <strong>WhatsApp:</strong>
-    <a href="https://wa.me/8618969163289" target="_blank" style="color: #333; text-decoration: underline;">Chat with us</a>
-    <span style="font-size: 0.9em; color: #666;">
-        Share: <a href="https://wa.me/8618969163289" target="_blank" style="color: #666; text-decoration: underline;">https://wa.me/8618969163289</a>
-    </span>
-</p>
+            <!-- 第三行：WhatsApp（电脑端+手机端适配） -->
+            <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; width: 100%;">
+                <span style="font-size: 1.2em;">💬</span>
+                <strong>WhatsApp:</strong>
+                <a href="https://wa.me/8618969163289" target="_blank" style="color: #333; text-decoration: underline;">Chat with us</a>
+                <span style="font-size: 0.9em; color: #666; word-break: break-all; flex: 1; min-width: 150px;">
+                    Share: <a href="https://wa.me/8618969163289" target="_blank" style="color: #666; text-decoration: underline;">https://wa.me/8618969163289</a>
+                </span>
             </div>
-            <!-- 第四行：WeChat（保持同一行） -->
+            <!-- 第四行：WeChat -->
             <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
                 <span style="font-size: 1.2em;">📱</span>
                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -281,11 +280,11 @@
     </div>
     <footer class="major" style="margin-top: 35px; text-align: center;">
         <ul class="actions special" style="padding-left: 0; list-style: none;">
-            <li><a href="mailto:baowenjing@nationlitech.com,guoli_technology@126.com?subject=Inquiry from Website" class="button primary">Send Message</a></li>
+            <li><a href="#cta" class="button primary">Learn More</a></li>
         </ul>
     </footer>
     <style>
-        /* 响应式适配 - 手机端优化 */
+        /* 响应式适配 - 优化后（适配新的WhatsApp布局） */
         @media screen and (max-width: 768px) {
             #cta h2 {
                 font-size: 1.6em !important;
@@ -298,17 +297,12 @@
             .contact-container > div {
                 flex-wrap: wrap !important;
                 gap: 15px !important;
-            }
-            /* WhatsApp 行手机端适配 */
-            .contact-container div:nth-child(3) {
                 align-items: flex-start !important;
             }
-            .contact-container div:nth-child(3) div:first-child {
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
-            }
-            .contact-container div:nth-child(3) .share-link {
+            /* 手机端WhatsApp链接强制占满整行，不超屏 */
+            .contact-container div:nth-child(3) span:last-child {
                 width: 100% !important;
+                min-width: unset !important;
                 margin-top: 0.3em !important;
             }
             #cta .button {
