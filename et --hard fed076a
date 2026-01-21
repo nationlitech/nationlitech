@@ -1,0 +1,48 @@
+[33m893b17a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Adjust "About us"2
+[33m5d86839[m Adjust "About us"
+[33mfed076a[m update header slogan and solutions images
+[33m38d03f9[m Adjust advantage images-2
+[33me6b552f[m Adjust advantage images
+[33me9ff4ac[m add 3 images of company's advantage
+[33md66c3a1[m main pionts
+[33mf0d91ed[m fix product9 html syntax and image display
+[33me4ebadb[m Update index.html
+[33md2d1921[m Adjust NO.9 images
+[33maddfe73[m adjust product layout: 5 items per row
+[33m4868ae5[m add 8 tea processing equipment products
+[33md890689[m Add product images
+[33m533c1b4[m Adjust3
+[33me8b4c8d[m Adjust3
+[33m6183d02[m Adjust2
+[33m603fdd9[m Adjust
+[33ma1887be[m update product list: add fresh tea leaf conveyor
+[33m522cb58[m Rename
+[33m4f30fe7[m Add fresh tea leaf conveyor image
+[33ma0723b1[m add flex style to tea machine li for center alignment
+[33m91ee8fa[m set img and text center alignment
+[33mf34895d[m fix img tag missing start marker
+[33m68033e5[m fix img tag missing start marker
+[33m684e6bb[m use imgur image link for product
+[33mfcbdfb1[m Merge branch 'main' of https://github.com/nationlitech/nationlitech
+[33m4ab7ec4[m update image url to raw and add display style
+[33md6a6f5c[m rename image to English bracket
+[33m900bf2b[m Rename Tea plucking machine(1）.png to Tea plucking machine(1).png
+[33m24b29a4[m fix image url to raw link
+[33m71218f5[m use github raw image url
+[33m4665b2e[m fix image name space
+[33m3b8c84c[m fix image name space
+[33m197dbe2[m fix image format to png
+[33ma29acc9[m fix image path
+[33m3eb4308[m add tea plucking machine to products section
+[33md923d91[m add tea plucking machine to products section
+[33mc142f76[m finish merge and update website files
+[33m0b8818b[m update nav and section titles
+[33me35142e[m Create CNAME
+[33ma31ba2b[m Delete CNAME
+[33m8a6b545[m Create CNAME
+[33m25fedf8[m Delete CNAME
+[33mf8c6046[m Create CNAME
+[33m9d93c00[m Delete CNAME
+[33m46d1666[m Create CNAME
+[33ma12ee00[m Upload Stellar template files
+[33m726fb59[m Initial commit
