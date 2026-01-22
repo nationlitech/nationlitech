@@ -230,7 +230,7 @@
 							</section>
 
 						<!-- Get Started -->
-							<!-- Contact Us 板块（电脑端+手机端完美适配） -->
+							<!-- Contact Us 板块（电脑端不变+手机端精准适配） -->
 <section id="cta" class="main special" style="background-color: #f9f9f9; padding: 4em 0; margin: 2em 0;">
     <header class="major">
         <h2 style="font-size: 2em; font-weight: 600; margin-bottom: 1.5em; text-align: center;">Contact Us</h2>
@@ -259,19 +259,19 @@
                     <strong>Address:</strong> Yuhang District, Hangzhou City, Zhejiang Province, China
                 </p>
             </div>
-            <!-- 第三行：WhatsApp（电脑端+手机端适配） -->
-            <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; width: 100%;">
+            <!-- 第三行：WhatsApp（电脑端一行/手机端两行） -->
+            <div class="whatsapp-container" style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; width: 100%;">
                 <span style="font-size: 1.2em;">💬</span>
                 <strong>WhatsApp:</strong>
                 <a href="https://wa.me/8618969163289" target="_blank" style="color: #333; text-decoration: underline;">Chat with us</a>
-                <span style="font-size: 0.9em; color: #666; word-break: break-all; flex: 1; min-width: 150px;">
+                <span class="whatsapp-share" style="font-size: 0.9em; color: #666; word-break: break-all; flex: 1; min-width: 150px;">
                     Share: <a href="https://wa.me/8618969163289" target="_blank" style="color: #666; text-decoration: underline;">https://wa.me/8618969163289</a>
                 </span>
             </div>
-            <!-- 第四行：WeChat -->
-            <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
+            <!-- 第四行：WeChat（电脑端+手机端均同一行） -->
+            <div class="wechat-container" style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
                 <span style="font-size: 1.2em;">📱</span>
-                <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                     <strong>WeChat:</strong> Add via QR Code
                     <img src="images/Contact Us/1.jpg" alt="WeChat QR Code" style="width: 80px; height: 80px; border: 1px solid #e0e0e0; padding: 4px; border-radius: 4px;">
                 </div>
@@ -284,7 +284,7 @@
         </ul>
     </footer>
     <style>
-        /* 响应式适配 - 优化后（适配新的WhatsApp布局） */
+        /* 响应式适配 - 仅修改手机端，电脑端无影响 */
         @media screen and (max-width: 768px) {
             #cta h2 {
                 font-size: 1.6em !important;
@@ -299,11 +299,24 @@
                 gap: 15px !important;
                 align-items: flex-start !important;
             }
-            /* 手机端WhatsApp链接强制占满整行，不超屏 */
-            .contact-container div:nth-child(3) span:last-child {
+            /* 手机端WhatsApp：Share单独一行，图标+WhatsApp+Chat同一行 */
+            .whatsapp-container {
+                align-items: center !important;
+            }
+            .whatsapp-share {
                 width: 100% !important;
                 min-width: unset !important;
-                margin-top: 0.3em !important;
+                margin-top: 0.5em !important;
+                margin-left: 32px !important; /* 对齐图标宽度，排版更整齐 */
+            }
+            /* 手机端WeChat：图标与内容同一行，避免错位 */
+            .wechat-container {
+                align-items: center !important;
+                flex-wrap: wrap !important;
+            }
+            .wechat-container div {
+                flex: 1 !important;
+                min-width: 150px !important;
             }
             #cta .button {
                 width: 80% !important;
